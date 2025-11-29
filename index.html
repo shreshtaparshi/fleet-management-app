@@ -12,5 +12,19 @@
     <label>password:</label>
     <input type="password" placeholder="enter your password" required><br>
     <button onclick="login()">login</button>
+
+    <script>
+        function details(a){
+            let email= a.email.value
+            let password=a.password.value
+            if (email==="admin@gmail.com" &&  password=== "admin1234"){
+                alert("Login success")
+                window.location="admin.html"
+            }
+            else{
+                alert("Wrong email or password")
+            }
+        }
+    </script>
 </body>
 </html>
