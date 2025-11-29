@@ -6,24 +6,27 @@
     <title>login page</title>
 </head>
 <body>
+    
     <h1>login page</h1>
+    <form onsubmit="return checklogin(this)">
     <label>Email:</label>
     <input type="email" placeholder="enter your email id" required><br>
     <label>password:</label>
     <input type="password" placeholder="enter your password" required><br>
-    <button onclick="login()">login</button>
-
+    <button type="submit">login</button>
+    </form>
     <script>
         function details(a){
             let email= a.email.value
             let password=a.password.value
             if (email==="admin@gmail.com" &&  password=== "admin1234"){
                 alert("Login success")
-                window.location="admin.html"
+                window.location.assign("admin.html")
             }
             else{
                 alert("Wrong email or password")
             }
+            return false
         }
     </script>
 </body>
